@@ -42,7 +42,7 @@ nav{display:flex;align-items:center;gap:26px;font-weight:500;font-size:15px}
 nav a{text-decoration:none;color:var(--muted);position:relative}
 nav a:not(.btn)::after{content:"";position:absolute;left:0;bottom:-4px;height:2px;width:100%;background:var(--blue);transform:scaleX(0);transform-origin:left;transition:transform .25s}
 nav a:not(.btn):hover{color:var(--ink)}nav a:not(.btn):hover::after{transform:scaleX(1)}
-.btn{display:inline-block;background:var(--btn);color:#fff;text-decoration:none;font-weight:600;padding:14px 26px;border-radius:4px;border:2px solid var(--btn);cursor:pointer;font:600 17px var(--body);transition:transform .2s,background .2s,color .2s}
+.btn{display:inline-block;background:var(--btn);color:#fff;text-decoration:none;font-weight:600;padding:14px 26px;border-radius:4px;border:2px solid var(--btn);cursor:pointer;font:600 17px var(--body)}
 .btn:hover{background:transparent;color:var(--ink);transform:translateY(-2px)}
 .btn.ghost{background:transparent;color:var(--ink);border-color:var(--ink)}
 .btn.ghost:hover{background:var(--ink);color:var(--bg)}
@@ -79,10 +79,10 @@ section{padding:88px 0}
 /* accordion */
 .acc{border-top:3px solid var(--ink)}
 .it{border-bottom:1px solid var(--line)}
-.it>button{all:unset;box-sizing:border-box;width:100%;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:26px 4px;cursor:pointer;font-family:var(--head);font-weight:700;font-size:clamp(32px,4.4vw,56px);text-transform:uppercase;transition:padding .3s,color .3s}
+.it>button{all:unset;box-sizing:border-box;width:100%;display:flex;align-items:center;justify-content:space-between;gap:20px;padding:26px 4px;cursor:pointer;font-family:var(--head);font-weight:700;font-size:clamp(34px,5vw,58px);text-transform:uppercase;transition:padding .3s,color .3s}
 .it>button:hover{padding-left:16px;color:var(--blue)}
 .it>button:focus-visible{outline:3px solid var(--blue);outline-offset:-3px}
-.it>button em{font-style:normal;width:44px;height:44px;flex:none;border:2px solid currentColor;border-radius:50%;display:grid;place-items:center;font-size:28px;transition:transform .35s,background .3s,color .3s}
+.it>button em{font-style:normal;width:44px;height:44px;flex:none;border:2px solid currentColor;border-radius:50%;display:grid;place-items:center;font-size:28px;transition:transform .35s,background .3s}
 .it.o>button em{transform:rotate(135deg);background:var(--blue);border-color:var(--blue);color:#fff}
 .pn{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s cubic-bezier(.2,.7,.2,1)}
 .it.o .pn{grid-template-rows:1fr}
@@ -115,7 +115,7 @@ section{padding:88px 0}
 .contact .lead{color:var(--muted);margin:20px 0 0;max-width:28em}
 .f{display:grid;gap:18px}
 .f label{display:grid;gap:6px;font-weight:500;font-size:15px}
-.f input,.f select,.f textarea{font:400 17px var(--body);color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:4px;padding:13px 14px;width:100%;transition:border-color .2s,box-shadow .2s}
+.f input,.f select,.f textarea{font:400 17px var(--body);color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:4px;padding:13px 14px;width:100%;transition:border-color .2s}
 .f input:focus,.f select:focus,.f textarea:focus{outline:none;border-color:var(--blue);box-shadow:0 0 0 4px rgba(var(--rgb),.18)}
 .f textarea{min-height:120px;resize:vertical}
 .note{font-size:14.5px;color:var(--muted);min-height:1.4em;margin:0}
@@ -151,7 +151,7 @@ nav a.on:not(.btn){color:var(--ink)}nav a.on:not(.btn)::after{transform:scaleX(1
 .ph{padding:80px 0 48px;position:relative;overflow:hidden}
 .ph h1{font-size:clamp(48px,9vw,120px)}
 .ph p{max-width:34em;color:var(--muted);font-size:19px;margin:22px 0 0}
-.ph::after{content:"";position:absolute;right:-40px;top:30px;width:min(34vw,360px);aspect-ratio:1;background:repeating-linear-gradient(to bottom,rgba(var(--rgb),.16) 0 24%,transparent 24% 38%);clip-path:polygon(40% 0,100% 0,100% 100%,0 100%);pointer-events:none}
+.ph::after{content:"";position:absolute;right:-40px;top:30px;width:min(34vw,360px);aspect-ratio:1;background:repeating-linear-gradient(to bottom,rgba(var(--rgb),.16) 0 24%,transparent 24% 38%);clip-path:polygon(0 0,100% 0,100% 100%,55% 100%,55% 72%,18% 72%,18% 42%,55% 42%,55% 24%,0 24%)}
 .stats{display:grid;grid-template-columns:repeat(3,1fr);border-bottom:1px solid var(--line)}
 .stat{padding:44px 24px 40px 0}
 .stat+.stat{padding-left:28px;border-left:1px solid var(--line)}
@@ -162,7 +162,7 @@ nav a.on:not(.btn){color:var(--ink)}nav a.on:not(.btn)::after{transform:scaleX(1
 .chip:hover{border-color:var(--blue)}
 .chip[aria-pressed="true"]{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:24px;perspective:1000px}
-.cd{background:var(--surface);border:1px solid var(--line);border-radius:6px;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s ease-out,box-shadow .3s,border-color .3s;animation:pop .5s cubic-bezier(.2,.7,.2,1) both}
+.cd{background:var(--surface);border:1px solid var(--line);border-radius:6px;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s ease-out,box-shadow .3s,border-color .3s;animation:pop .55s cubic-bezier(.2,.7,.2,1) backwards}
 .cd:hover{border-color:var(--blue);box-shadow:0 24px 50px -28px rgba(var(--rgb),.7)}
 .cd.hide{display:none}
 @keyframes pop{from{opacity:0;transform:scale(.94) translateY(14px)}to{opacity:1;transform:none}}
@@ -195,7 +195,7 @@ nav a.on:not(.btn){color:var(--ink)}nav a.on:not(.btn)::after{transform:scaleX(1
 .fl a{color:#b6c3e0;text-decoration:none}.fl a:hover{color:#fff}
 @media (max-width:820px){
 .mb{display:block}
-nav{position:absolute;top:100%;left:0;right:0;background:var(--bg);flex-direction:column;align-items:flex-start;gap:0;padding:6px 24px 22px;border-bottom:1px solid var(--line);opacity:0;visibility:hidden;transform:translateY(-8px);transition:all .25s}
+nav{position:absolute;top:100%;left:0;right:0;background:var(--bg);flex-direction:column;align-items:flex-start;gap:0;padding:6px 24px 22px;border-bottom:1px solid var(--line);opacity:0;visibility:hidden;transform:translateY(-8px);transition:opacity .25s,transform .25s,visibility .25s}
 nav.o{opacity:1;visibility:visible;transform:none}
 nav a:not(.btn){display:block;padding:13px 0;font-size:21px;width:100%;border-bottom:1px solid var(--line)}
 nav .btn{margin-top:16px}
@@ -323,13 +323,13 @@ a.cd{color:inherit;text-decoration:none}
 <div class="wrap">
 <div class="acc rv" id="acc">
 <div class="it o"><button type="button" aria-expanded="true">Websites<em>+</em></button>
-<div class="pn"><div><div class="pc"><p>Fast, search-ready sites that explain what you do and bring in enquiries.</p><ul><li>Company sites and landing pages</li><li>Online catalogues and booking pages</li><li>Speed, SEO and analytics set up</li></ul></div></div></div></div>
+<div class="pn"><div><div class="pc"><p>Fast, search-ready sites that explain what you do and bring in enquiries.</p><ul><li>Company sites and landing pages</li><li>Online catalogues and booking pages</li><li>Search and speed improvements</li></ul></div></div></div></div>
 <div class="it"><button type="button" aria-expanded="false">Web and mobile apps<em>+</em></button>
-<div class="pn"><div><div class="pc"><p>Apps your customers and staff actually use, designed around real workflows and built to scale.</p><ul><li>Customer portals and booking platforms</li><li>Android, iOS and web from one plan</li><li>Admin dashboards for your team</li></ul></div></div></div></div>
+<div class="pn"><div><div class="pc"><p>Apps your customers and staff actually use, designed around real workflows and built to scale.</p><ul><li>Customer portals and booking platforms</li><li>Android and iOS apps</li><li>Internal tools and dashboards</li></ul></div></div></div></div>
 <div class="it"><button type="button" aria-expanded="false">CRM systems<em>+</em></button>
-<div class="pn"><div><div class="pc"><p>One place for leads, clients and follow-ups, set up around your sales process instead of forcing you into someone else’s.</p><ul><li>Lead and follow-up tracking</li><li>Quotes, invoices and reminders</li><li>Reports your team will read</li></ul></div></div></div></div>
+<div class="pn"><div><div class="pc"><p>One place for leads, clients and follow-ups, set up around your sales process instead of forcing you into someone else’s.</p><ul><li>Lead and follow-up tracking</li><li>Sales reports and pipelines</li><li>Integrations with email and WhatsApp</li></ul></div></div></div></div>
 <div class="it"><button type="button" aria-expanded="false">AI integration<em>+</em></button>
-<div class="pn"><div><div class="pc"><p>Add chat assistants, document handling and automation to the tools you already use.</p><ul><li>Assistants trained on your own documents</li><li>Automated data entry and reports</li><li>Links into email, messaging and your CRM</li></ul></div></div></div></div>
+<div class="pn"><div><div class="pc"><p>Add chat assistants, document handling and automation to the tools you already use.</p><ul><li>Assistants trained on your own documents</li><li>Automated data extraction</li><li>Human handoff and workflow automation</li></ul></div></div></div></div>
 </div>
 </div>
 </section>
@@ -391,8 +391,8 @@ a.cd{color:inherit;text-decoration:none}
 <div class="fx rv">
 <h2>Meet the founder</h2>
 <p><strong>Anil Anand founded Entroxis to build the software growing businesses keep putting off:</strong> a proper website, an app customers actually use, a CRM the team trusts, and AI that does real work.</p>
-<p>He studies Integrated MSc Physics at the Sardar Vallabhbhai National Institute of Technology, Surat (NIT Surat, also known as SVNIT). Physics is where the name comes from. Entropy describes how systems drift into disorder, and good engineering is the work of holding structure against that drift.</p>
-<p>Anil is also the founder and CEO of WavyGo Mobility Pvt. Ltd., a DPIIT-recognized startup pre-incubated at the ASHINE programme at SVNIT with SSIP support. Building a product of his own shapes how Entroxis works with clients: keep the scope tight, show progress early and fix what users actually run into.</p>
+<p>He studies Integrated MSc Physics at the Sardar Vallabhbhai National Institute of Technology, Surat (NIT Surat, also known as SVNIT). Physics is where the name comes from. Entropy describes how systems drift into disorder and Entroxis is the idea of bringing them back into structure.</p>
+<p>Anil is also the founder and CEO of WavyGo Mobility Pvt. Ltd., a DPIIT-recognized startup pre-incubated at the ASHINE programme at SVNIT with SSIP support. Building a product of his own shapes how he approaches client work: ships early, learns from use and stays for the result.</p>
 <ul class="facts">
 <li>Founder of Entroxis</li>
 <li>Integrated MSc Physics, NIT Surat (SVNIT)</li>
@@ -448,12 +448,12 @@ a.cd{color:inherit;text-decoration:none}
 </div>
 <section style="padding-top:24px"><div class="wrap">
 <div class="acc rv">
-<div class="it o"><button type="button" aria-expanded="true">How long does a project take?<em>+</em></button><div class="pn"><div><div class="pc" style="grid-template-columns:1fr"><p>A simple website can be live in a few weeks. Apps, CRM systems and AI integrations take longer and depend on scope. You get a timeline in writing before we start.</p></div></div></div></div>
-<div class="it"><button type="button" aria-expanded="false">What does it cost?<em>+</em></button><div class="pn"><div><div class="pc" style="grid-template-columns:1fr"><p>It depends on what you need built. After a short call we send a written scope and a price, so you know the cost before any work begins.</p></div></div></div></div>
-<div class="it"><button type="button" aria-expanded="false">Do I need to know exactly what I want?<em>+</em></button><div class="pn"><div><div class="pc" style="grid-template-columns:1fr"><p>No. Most clients arrive with a problem, not a spec. Tell us what is slowing the business down and we will work out what to build and what to leave out.</p></div></div></div></div>
-<div class="it"><button type="button" aria-expanded="false">Who owns what you build?<em>+</em></button><div class="pn"><div><div class="pc" style="grid-template-columns:1fr"><p>Ownership of the finished work is agreed in writing before the project starts, so there are no surprises later.</p></div></div></div></div>
-<div class="it"><button type="button" aria-expanded="false">Do you support the product after launch?<em>+</em></button><div class="pn"><div><div class="pc" style="grid-template-columns:1fr"><p>Yes. We stay on after go-live for fixes, tuning and new features, and we train your team to use what we built.</p></div></div></div></div>
-<div class="it"><button type="button" aria-expanded="false">Where are you based and who do you work with?<em>+</em></button><div class="pn"><div><div class="pc" style="grid-template-columns:1fr"><p>Entroxis is based in India. We work with businesses across India, the US, Europe and the Middle East, and we work remotely.</p></div></div></div></div>
+<div class="it o"><button type="button" aria-expanded="true">How long does a project take?<em>+</em></button><div class="pn"><div><div class="pc" style="grid-template-columns:1fr"><p>A simple website usually takes 2–4 weeks. An app or CRM usually takes 6–12 weeks. We confirm the exact timeline in the scope before work starts.</p></div></div></div></div>
+<div class="it"><button type="button" aria-expanded="false">What does it cost?<em>+</em></button><div class="pn"><div><div class="pc" style="grid-template-columns:1fr"><p>It depends on the scope, features and integrations. We give a written fixed price after the short discovery call.</p></div></div></div></div>
+<div class="it"><button type="button" aria-expanded="false">Do I need to know exactly what I want?<em>+</em></button><div class="pn"><div><div class="pc" style="grid-template-columns:1fr"><p>No. Most clients start with the problem. We help turn it into a clear scope and suggest what not to build.</p></div></div></div></div>
+<div class="it"><button type="button" aria-expanded="false">Who owns what you build?<em>+</em></button><div class="pn"><div><div class="pc" style="grid-template-columns:1fr"><p>Ownership of the finished product is agreed in the contract before work starts. We do not hide source code or hold it hostage.</p></div></div></div></div>
+<div class="it"><button type="button" aria-expanded="false">Do you support the product after launch?<em>+</em></button><div class="pn"><div><div class="pc" style="grid-template-columns:1fr"><p>Yes. We stay on after go-live for fixes, support and new features. We agree the support terms upfront.</p></div></div></div></div>
+<div class="it"><button type="button" aria-expanded="false">Where are you based and who do you work with?<em>+</em></button><div class="pn"><div><div class="pc" style="grid-template-columns:1fr"><p>Entroxis is based in India and works with businesses across India, the US, Europe and the Middle East.</p></div></div></div></div>
 </div>
 <div class="more rv"><a class="btn" href="#contact">Still have a question? Write to us</a></div>
 </div></section>
@@ -471,6 +471,7 @@ a.cd{color:inherit;text-decoration:none}
 <div class="lg" style="margin:0 0 28px"><img src="logo-full.png" alt="Entroxis logo"></div>
 <p style="margin:0;color:var(--muted)">Prefer to write directly?</p>
 <div class="mail"><a href="mailto:anilanand635@gmail.com" id="em">anilanand635@gmail.com</a><button type="button" id="cp">Copy</button></div>
+<div class="mail" style="margin-top:14px"><a href="https://wa.me/919341162251" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px"><svg width="26" height="26" viewBox="0 0 24 24" fill="#25D366" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2zm5.82 14.01c-.24.68-1.41 1.3-1.95 1.38-.5.08-1.13.11-1.82-.11-.42-.13-.96-.31-1.65-.61-2.9-1.25-4.79-4.17-4.94-4.36-.14-.19-1.18-1.57-1.18-3 0-1.43.75-2.13 1.01-2.42.27-.29.58-.36.77-.36.19 0 .39 0 .56.01.18.01.42-.07.66.5.24.58.82 2 .89 2.15.07.14.12.31.02.5-.1.19-.14.31-.29.48-.14.17-.3.38-.43.51-.14.14-.29.3-.12.58.17.29.74 1.22 1.59 1.98 1.09.97 2.01 1.27 2.3 1.41.29.14.46.12.63-.07.17-.19.72-.84.91-1.13.19-.29.39-.24.65-.14.27.1 1.69.8 1.98.94.29.14.48.22.55.34.07.12.07.69-.17 1.37z"/></svg>+91 93411 62251</a></div>
 </div>
 <form class="f rv" id="cf" novalidate>
 <label>Your name<input name="n" autocomplete="name" required></label>
@@ -489,7 +490,7 @@ a.cd{color:inherit;text-decoration:none}
 <footer>
 <div class="wrap">
 <a class="fb" href="#home"><img src="logo-full.png" alt="Entroxis"></a>
-<div class="fl"><a href="#services">Services</a><a href="#work">Work</a><a href="#blog">Blog</a><a href="#about">About</a><a href="#faq">FAQ</a><a href="#contact">Contact</a><a href="mailto:anilanand635@gmail.com">anilanand635@gmail.com</a></div>
+<div class="fl"><a href="#services">Services</a><a href="#work">Work</a><a href="#blog">Blog</a><a href="#about">About</a><a href="#faq">FAQ</a><a href="#contact">Contact</a><a href="mailto:anilanand635@gmail.com">Email</a></div>
 <span>© 2026 Entroxis. All rights reserved.</span>
 </div>
 </footer>
@@ -506,58 +507,58 @@ var W=[
 {t:"Sales CRM",c:"CRM",s:"-4%",d:"Lead pipeline, follow-up reminders and weekly reports for a sales team that lived in spreadsheets.",b:["Pipeline view and reminders","Reports for the owner"]},
 {t:"Support assistant",c:"AI",s:"14%",d:"A chat assistant that answers customer questions from the client’s own documents.",b:["Trained on company documents","Hands over to a person when needed"]},
 {t:"Operations dashboard",c:"Apps",s:"-18%",d:"Orders, staff and revenue on one live screen instead of five separate files.",b:["Live numbers in one place","Role-based access for the team"]}];
-function card(p,i){return '<article class="cd" style="animation-delay:'+(i*70)+'ms" data-c="'+p.c+'"><div class="vz" style="--s:'+p.s+'"><i class="a"></i><i class="b"></i></div><div class="cb"><span class="tag">'+p.c+'</span><h3>'+p.t+'</h3><p>'+p.d+'</p><ul><li>'+p.b[0]+'</li><li>'+p.b[1]+'</li></ul></div></article>'}
+function card(p,i){return '<article class="cd" style="animation-delay:'+(i*70)+'ms" data-c="'+p.c+'"><div class="vz" style="--s:'+p.s+'"><i class="a"></i><i class="b"></i></div><div class="cb"><span class="tag">'+p.c+'</span><h3>'+p.t+'</h3><p>'+p.d+'</p><ul>'+p.b.map(function(x){return '<li>'+x+'</li>'}).join('')+'</ul></div></article>'}
 $("#grid").innerHTML=W.map(card).join("");
 $("#feat").innerHTML=W.slice(0,3).map(card).join("");
 var POSTS=[
-{s:"website-or-app",t:"Do you need an app, or is a website enough?",c:"Apps",d:"18 Nov 2026",r:"3 min read",v:"-12%",e:"Most businesses ask for an app when they need a good website. Here is how to tell which one you need.",x:[
+{s:"website-or-app",t:"Do you need an app, or is a website enough?",c:"Apps",d:"18 Nov 2026",r:"3 min read",v:"-12%",e:"Most businesses ask for an app when they need a good website. Here is how to tell the difference.",x:[
 "Most businesses that ask us for an app actually need a good website. Apps cost more to build and maintain, and customers have to install one before they get any value from it.",
 "## A website is enough when",
 ["People find you through search or social media","You need to explain services, show prices or share a catalogue","Enquiries and bookings can happen through a form, a call or a message"],
 "## Build an app when",
 ["Customers come back often and do the same actions each time","They need live status, payments or notifications","Your staff need a tool in the field or a control panel to run daily work"],
 "A sensible path is to launch a fast website first, watch what customers repeat, and then build the app around those actions. You spend less and you build what people already use."]},
-{s:"outgrown-spreadsheets",t:"Five signs your business has outgrown spreadsheets",c:"CRM",d:"12 Nov 2026",r:"3 min read",v:"8%",e:"Spreadsheets are a good start. These are the signals that it is time for something built for the job.",x:[
+{s:"outgrown-spreadsheets",t:"Five signs your business has outgrown spreadsheets",c:"CRM",d:"12 Nov 2026",r:"3 min read",v:"8%",e:"Spreadsheets are a good start. These are the signals that it is time for a CRM or internal tool.",x:[
 "Spreadsheets are a great way to start. The trouble begins when the business grows around them. Watch for these five signs.",
-["Two people edit the same file and one loses work, or you keep a folder of files named final, final2 and latest","Follow-ups depend on someone remembering, so leads and payments slip through","Monthly reports take a day to put together by hand","New staff need long training just to understand how the sheet works","You cannot answer the question “how are we doing this month?” in under a minute"],
+["Two people edit the same file and one loses work, or you keep a folder of files named final, final2 and latest","Follow-ups depend on someone remembering, so leads and payments slip through","Monthly reports take hours to compile from several files","The owner cannot see what is happening without asking several people","The same data is typed into different tools or sent in repeated emails"],
 "If three or more of these sound familiar, a simple CRM or internal tool will save more time than it costs. It does not need to be big. It needs to hold your data in one place and show the next action clearly."]},
 {s:"crm-basics",t:"What a CRM should do for a small sales team",c:"CRM",d:"6 Nov 2026",r:"3 min read",v:"-4%",e:"A CRM that nobody fills in is worse than a spreadsheet. Here is what to ask for first.",x:[
 "A CRM does not need fifty features. For a small sales team it needs to do a few things well.",
 "## The essentials",
-["Keep every lead in one place with its source and history","Show a clear next step and a date for each lead","Send reminders so follow-ups happen","Give a simple pipeline view from new lead to closed deal","Produce a weekly report the owner can read in two minutes"],
+["Keep every lead in one place with its source and history","Show a clear next step and a date for each lead","Send reminders so follow-ups happen","Give a simple pipeline view from new lead to closed deal","Let the owner see activity without chasing the team"],
 "## Start small",
-"Begin with the fewest fields you can. Every extra field is another thing your team has to type, and a CRM that nobody fills in is worse than a spreadsheet. Add detail only when someone asks for a report that needs it."]},
-{s:"ai-for-small-business",t:"Where AI helps a small business, and where it does not",c:"AI",d:"29 Oct 2026",r:"4 min read",v:"14%",e:"AI is useful for repeated, well-defined work. It is a poor fix for a broken process.",x:[
+"Begin with the fewest fields you can. Every extra field is another thing your team has to type, and a CRM that nobody fills in is worse than a spreadsheet. Add detail only when someone asks for a report or a decision depends on it."]},
+{s:"ai-for-small-business",t:"Where AI helps a small business, and where it does not",c:"AI",d:"29 Oct 2026",r:"4 min read",v:"14%",e:"AI is useful for repeated, well-defined work. It is a poor fix for an unclear process.",x:[
 "AI can save a small business real time, but only when it is pointed at the right work.",
 "## Where it helps",
-["Answering repeated customer questions from your own documents","Drafting and summarising emails, reports and meeting notes","Pulling data out of forms, invoices and messages","Searching your internal documents and knowledge"],
+["Answering repeated customer questions from your own documents","Drafting and summarising emails, reports and meeting notes","Pulling data out of forms, invoices and messages","Searching your internal documents for a specific answer"],
 "## Where it does not",
 ["Replacing human judgement on pricing, contracts or legal matters","Fixing a process nobody has written down","Working well on messy, incomplete data"],
 "The rule we use is simple: fix the process first, then automate it. If a person cannot explain the steps clearly, a model will not do better."]},
 {s:"brief-a-software-team",t:"How to brief a software team so the price does not change",c:"Websites",d:"20 Oct 2026",r:"4 min read",v:"-18%",e:"Most price changes come from unclear briefs. Six things to write down before you ask for a quote.",x:[
 "Most surprises in software projects come from a brief that left things out. Write these six things down before you ask for a quote.",
-["The problem you want solved, in two or three sentences","Who will use it: customers, staff or both","What must be there on day one, and what can wait","Examples of products you like and ones you do not","Who makes decisions and signs off on each stage","What done looks like, so everyone agrees when the project is finished"],
+["The problem you want solved, in two or three sentences","Who will use it: customers, staff or both","What must be there on day one, and what can wait","Examples of products you like and ones you do not","The systems it needs to connect to","How the team will know the work succeeded"],
 "You do not need technical words. A clear description of the problem and the people involved is more useful than a long feature list. A good team will turn it into a written scope and a fixed price."]}
 ];
-function bcard(p,i){return '<a class="cd" href="#blog-'+p.s+'" style="animation-delay:'+(i*70)+'ms"><div class="vz" style="--s:'+p.v+'"><i class="a"></i><i class="b"></i></div><div class="cb"><span class="tag">'+p.c+'</span><h3>'+p.t+'</h3><p>'+p.e+'</p><span class="rd">'+p.d+', '+p.r+'</span></div></a>'}
+function bcard(p,i){return '<a class="cd" href="#blog-'+p.s+'" style="animation-delay:'+(i*70)+'ms"><div class="vz" style="--s:'+p.v+'"><i class="a"></i><i class="b"></i></div><div class="cb"><span class="tag">'+p.c+'</span><h3>'+p.t+'</h3><p>'+p.e+'</p><div class="rd">'+p.d+' · '+p.r+'</div></div></a>'}
 $("#bgrid").innerHTML=POSTS.map(bcard).join("");
 
 /* tilt */
 if(!RM&&matchMedia("(hover:hover)").matches){$$(".cd").forEach(function(c){
-c.addEventListener("pointermove",function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform="rotateY("+x*7+"deg) rotateX("+(-y*7)+"deg) translateY(-4px)"});
+c.addEventListener("pointermove",function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;c.style.transform="rotateY("+x*7+"deg) rotateX("+(-y*7)+"deg)"});
 c.addEventListener("pointerleave",function(){c.style.transform=""})})}
 /* filter */
 $$(".chip").forEach(function(b){b.addEventListener("click",function(){
 $$(".chip").forEach(function(x){x.setAttribute("aria-pressed",x===b)});
-var f=b.dataset.f,i=0;$$("#grid .cd").forEach(function(c){var ok=f==="All"||c.dataset.c===f;c.classList.toggle("hide",!ok);
+var f=b.dataset.f,i=0;$$("#grid .cd").forEach(function(c){var ok=f=== "All"||c.dataset.c===f;c.classList.toggle("hide",!ok);
 if(ok){c.style.animation="none";void c.offsetWidth;c.style.animation="";c.style.animationDelay=(i++*70)+"ms"}})})});
 /* scroll progress + header */
 var pg=$("#prog"),hd=$("#hd");
 function sc(){var h=document.documentElement,m=h.scrollHeight-innerHeight;pg.style.transform="scaleX("+(m>0?scrollY/m:0)+")";hd.classList.toggle("s",scrollY>10)}
 addEventListener("scroll",sc,{passive:true});sc();
 /* reveal + counters + steps */
-var io=("IntersectionObserver" in window)?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var t=e.target;t.classList.add("in");io.unobserve(t);if(t.classList.contains("cnt"))count(t)}})},{threshold:.15}):null;
-function count(el){var n=+el.dataset.n;if(RM){el.textContent=n;return}var s=performance.now();(function f(t){var p=Math.min((t-s)/1400,1);el.textContent=Math.round(n*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f)})(s)}
+var io=("IntersectionObserver" in window)?new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var t=e.target;t.classList.add("in");io.unobserve(t);if(t.classList.contains("cnt"))count(t);if(t.classList.contains("steps"))t.classList.add("in")}})},{threshold:.15}):null;
+function count(el){var n=+el.dataset.n;if(RM){el.textContent=n;return}var s=performance.now();(function f(t){var p=Math.min((t-s)/1400,1);el.textContent=Math.round(n*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(f);else el.textContent=n})(s)}
 $$(".rv,.cnt,.steps").forEach(function(e){if(io)io.observe(e);else{e.classList.add("in");if(e.classList.contains("cnt"))count(e)}});
 /* accordion */
 var items=$$(".it");
@@ -572,10 +573,10 @@ ci--;tw.textContent=w.slice(0,ci)||"\u200b";
 if(ci<=0){del=false;wi=(wi+1)%words.length;ci=0;return setTimeout(tick,250)}
 setTimeout(tick,45)},4200)}
 /* network canvas */
-var cv=$("#net"),cx=cv.getContext("2d"),P=[],W2=0,H=0,ordered=false,mouse={x:-999,y:-999},auto=true,btn=$("#ord"),lbl=$("span",btn);
+var cv=$("#net"),cx=cv.getContext("2d"),P=[],W2=0,H=0,ordered=false,mouse={x:-999,y:-999},auto=true,btn=$("#ord"),lbl=$("span",btn),started=false,cur=null,nav=$("#nav"),mb=$("#mb");
 function build(){var r=cv.getBoundingClientRect();if(!r.width)return;var d=Math.min(devicePixelRatio||1,2);W2=r.width;H=r.height;cv.width=W2*d;cv.height=H*d;cx.setTransform(d,0,0,d,0,0);
-var n=W2<600?36:64,cols=Math.round(Math.sqrt(n*W2/H)),rows=Math.ceil(n/cols);P=[];
-for(var i=0;i<n;i++){var c=i%cols,rw=Math.floor(i/cols);P.push({x:Math.random()*W2,y:Math.random()*H,vx:(Math.random()-.5)*.7,vy:(Math.random()-.5)*.7,gx:W2*.08+W2*.84*(c+.5)/cols,gy:H*.1+H*.8*(rw+.5)/rows})}}
+var n=W2<600?36:64,cols=Math.round(Math.sqrt(n*W2/H));P=[];
+for(var i=0;i<n;i++){var c=i%cols,rw=Math.floor(i/cols);P.push({x:Math.random()*W2,y:Math.random()*H,vx:(Math.random()-.5)*.7,vy:(Math.random()-.5)*.7,gx:W2*.08+W2*.84*(c+.5)/cols,gy:H*.1+H*.8*(rw+.5)/Math.ceil(n/cols)})}}
 function col(a){var v=getComputedStyle(document.documentElement).getPropertyValue("--rgb").trim()||"26,79,209";return "rgba("+v+","+a+")"}
 function draw(){cx.clearRect(0,0,W2,H);var link=ordered?Math.max(W2/6,H/4)*1.05:130,i,j;
 for(i=0;i<P.length;i++){var p=P[i];
@@ -584,25 +585,23 @@ else{p.x+=p.vx;p.y+=p.vy;if(p.x<0||p.x>W2)p.vx*=-1;if(p.y<0||p.y>H)p.vy*=-1;var 
 for(i=0;i<P.length;i++)for(j=i+1;j<P.length;j++){var a=P[i],b=P[j],ex=a.x-b.x,ey=a.y-b.y,d=Math.sqrt(ex*ex+ey*ey);
 if(d<link&&(!ordered||Math.abs(a.gx-b.gx)<1||Math.abs(a.gy-b.gy)<1)){cx.strokeStyle=col((1-d/link)*(ordered?.55:.35));cx.lineWidth=1;cx.beginPath();cx.moveTo(a.x,a.y);cx.lineTo(b.x,b.y);cx.stroke()}}
 cx.fillStyle=col(.85);for(i=0;i<P.length;i++){cx.beginPath();cx.arc(P[i].x,P[i].y,ordered?3:2.4,0,6.283);cx.fill()}}
-var cur=null;
 function loop(){if(cur)draw();requestAnimationFrame(loop)}
 function setOrder(v){ordered=v;btn.setAttribute("aria-pressed",v);lbl.textContent=v?"Let it drift":"Bring order";if(!v)P.forEach(function(p){p.vx=(Math.random()-.5)*.7;p.vy=(Math.random()-.5)*.7})}
 btn.addEventListener("click",function(){setOrder(!ordered);auto=false});
 addEventListener("pointermove",function(e){mouse.x=e.clientX;mouse.y=e.clientY});
 addEventListener("resize",build);
 /* router (hash pages) */
-var R=["home","services","work","blog","about","faq","contact"],T={home:"Entroxis | Custom websites, apps, CRM and AI integration",services:"Services | Entroxis",work:"Our work | Entroxis",blog:"Blog | Entroxis",about:"About and team | Entroxis",faq:"FAQ | Entroxis",contact:"Contact | Entroxis"},wipe=$("#wipe"),nav=$("#nav"),mb=$("#mb"),started=false;
+var R=["home","services","work","blog","about","faq","contact"],T={home:"Entroxis | Custom websites, apps, CRM and AI integration",services:"Services | Entroxis",work:"Our work | Entroxis",blog:"Blog | Entroxis",about:"About | Entroxis",faq:"FAQ | Entroxis",contact:"Contact | Entroxis"},wipe=$("#wipe");
 function find(id){for(var i=0;i<POSTS.length;i++)if("blog-"+POSTS[i].s===id)return i;return -1}
-function renderPost(i){var p=POSTS[i],n=POSTS[(i+1)%POSTS.length],h='<a class="back" href="#blog">All articles</a><br><span class="tag">'+p.c+'</span><h1>'+p.t+'</h1><div class="meta">'+p.d+', '+p.r+', by Entroxis</div>';
+function renderPost(i){var p=POSTS[i],n=POSTS[(i+1)%POSTS.length],h='<a class="back" href="#blog">All articles</a><br><span class="tag">'+p.c+'</span><h1>'+p.t+'</h1><div class="meta">'+p.d+', '+p.r+'</div>';
 p.x.forEach(function(s){if(Array.isArray(s))h+='<ul>'+s.map(function(l){return '<li>'+l+'</li>'}).join("")+'</ul>';else if(s.indexOf("## ")===0)h+='<h2>'+s.slice(3)+'</h2>';else h+='<p>'+s+'</p>'});
-h+='<div class="nx"><a href="#blog-'+n.s+'"><small>Next article</small>'+n.t+'</a><a class="btn" href="#contact" style="font:600 17px var(--body);text-transform:none;color:#fff">Talk to us about your project</a></div>';
-$("#post").innerHTML=h}
+h+='<div class="nx"><a href="#blog-'+n.s+'"><small>Next article</small>'+n.t+'</a><a class="btn" href="#contact" style="font:600 17px var(--body);text-transform:none;color:#fff">Talk to us about this</a></div>';$("#post").innerHTML=h}
 function show(id){var pi=find(id),vid=pi>=0?"post":id,nr=pi>=0?"blog":id;if(pi>=0)renderPost(pi);
-$$(".view").forEach(function(v){v.classList.toggle("on",v.id==="v-"+vid)});
+$$(".view").forEach(function(v){v.classList.toggle("on",v.id=== "v-"+vid)});
 $$("nav a[data-r]").forEach(function(a){a.classList.toggle("on",a.dataset.r===nr)});
-document.title=pi>=0?POSTS[pi].t+" | Entroxis":T[id];cur=id;document.body.dataset.p=id==="home"?"home":"in";scrollTo(0,0);nav.classList.remove("o");mb.setAttribute("aria-expanded","false");
+document.title=pi>=0?POSTS[pi].t+" | Entroxis":T[id];cur=id;document.body.dataset.p=id=== "home"?"home":"in";scrollTo(0,0);nav.classList.remove("o");mb.setAttribute("aria-expanded","false");
 build();if(id!=="home"&&ordered)setOrder(false);
-if(id==="home"&&!started){started=true;if(RM){setOrder(true);draw()}else{setTimeout(function(){if(auto&&cur==="home")setOrder(true)},4600);setTimeout(function(){if(auto&&cur==="home")setOrder(false)},7600)}}}
+if(id=== "home"&&!started){started=true;if(RM){setOrder(true);draw()}else{setTimeout(function(){if(auto&&cur=== "home")setOrder(true)},4600);setTimeout(function(){if(auto&&cur=== "home")setOrder(false)},10000)}}}
 function route(first){var id=location.hash.slice(1);if(R.indexOf(id)<0&&find(id)<0)id="home";if(id===cur)return;
 if(first||RM||cur===null){show(id);return}
 wipe.classList.remove("go");void wipe.offsetWidth;wipe.classList.add("go");setTimeout(function(){show(id)},380);setTimeout(function(){wipe.classList.remove("go")},820)}
@@ -611,7 +610,7 @@ mb.addEventListener("click",function(){var o=nav.classList.toggle("o");mb.setAtt
 loop();route(true);
 /* contact */
 var fm=$("#cf"),nt=$("#note");
-fm.addEventListener("submit",function(e){e.preventDefault();var d=new FormData(fm),n=(d.get("n")||"").trim(),c=(d.get("c")||"").trim();
+fm.addEventListener("submit",function(e){e.preventEvent();var d=new FormData(fm),n=(d.get("n")||"").trim(),c=(d.get("c")||"").trim();
 if(!n||!c){nt.textContent="Please add your name and a way to reach you.";return}
 var body="Name: "+n+"\nContact: "+c+"\nNeed: "+d.get("t")+"\n\n"+(d.get("m")||"");
 nt.textContent="Opening your email app. Press send there to finish.";
